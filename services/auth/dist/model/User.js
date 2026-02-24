@@ -15,7 +15,7 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
-        default: "null"
+        default: null
     }
 }, {
     timestamps: true

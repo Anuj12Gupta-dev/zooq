@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* ===== ZOOQ / FOOD DELIVERY THEME ===== */
+@theme {
+    --color-zooq-bg: #0a0a0a;
+    --color-zooq-surface: #1a1a1a;
+    --color-zooq-primary: #ffc200;
+    --color-zooq-primary-hover: #e6af00;
+    --color-zooq-text: #ffffff;
+    --color-zooq-text-muted: rgba(255, 255, 255, 0.55);
+    --color-zooq-border: rgba(255, 255, 255, 0.08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color: var(--color-zooq-bg, #0a0a0a);
+    color: var(--color-zooq-text, #ffffff);
+    min-height: 100vh;
+}
+
+/* ===== GLOBAL SPINNER ===== */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: var(--color-zooq-primary, #ffc200);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner.large {
+    width: 48px;
+    height: 48px;
+    border-width: 4px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
